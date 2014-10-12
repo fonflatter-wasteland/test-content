@@ -2,7 +2,3 @@ language: ruby
 script: "bundle exec jekyll build"
 after_script:
   - find _site/
-branches:
-  only:
-    - master
-    - scaffold
