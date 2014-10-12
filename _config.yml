@@ -1,0 +1,8 @@
+languages:
+  de:
+    title: fonflatter.de
+    url: https://www.fonflatter.de
+  en:
+    title: fonflatter.com
+    url: https://www.fonflatter.com
+permalink: /:categories/:year/:month/:day/:title/
