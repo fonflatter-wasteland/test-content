@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+{% capture disable_output %}
+<!-- the following includes do not output anything -->
+{% include i18n.md %}
+{% endcapture %}
+<head lang="{{ lang }}">
+    <meta charset="UTF-8">
+    <title>{{ _.title }} - {{ page.title }}</title>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css"/>
+</head>
+
+<body>
