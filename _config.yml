@@ -3,10 +3,6 @@ exclude:
   - Gemfile.lock
   - README.md
 languages:
-  de:
-    title: fonflatter.de
-    url: https://www.fonflatter.de
-  en:
-    title: fonflatter.com
-    url: https://www.fonflatter.com
+  - de
+  - en
 permalink: /:categories/:year/:month/:day/:title/
