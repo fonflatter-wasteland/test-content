@@ -3,6 +3,7 @@
 {% capture disable_output %}
 <!-- the following includes do not output anything -->
 {% include i18n.md %}
+{% include dates.md %}
 {% endcapture %}
 <head lang="{{ lang }}">
     <meta charset="UTF-8">
@@ -14,3 +15,10 @@
 
 <body>
 {% include menu_top.html %}
+
+<div class="row">
+    <div id="sidebar_left" class="col-md-1" >
+        {% include menu_archive.html %}
+    </div>
+
+    <div class="col-md-11">
