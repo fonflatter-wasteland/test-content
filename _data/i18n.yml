@@ -2,7 +2,20 @@ de:
   site:
     title: fonflatter.de
     url: https://www.fonflatter.de
+  menu:
+    title: Menü
+    items:
+      gifts: Geschenke
+      mail: Post
+      shop: Fredshop
+
 en:
   site:
     title: fonflatter.com
     url: https://www.fonflatter.com
+  menu:
+    title: Menu
+    items:
+      gifts: Gifts
+      mail: Mail
+      shop: Fredshop
