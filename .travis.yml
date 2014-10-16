@@ -7,6 +7,7 @@ before_install:
 - chmod og-rw ~/.ssh/id_rsa
 - git config --global user.name "fredobot"
 - git config --global user.email "fredobot@winniehell.de"
+- git config --global push.default simple
 install: "git clone -o github -b master git@github.com:fonflatter/test-content.git $OUTPUT_DIR"
 before_script:
 - curl https://raw.githubusercontent.com/fonflatter/util/master/merge.sh > ~/merge.sh
