@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/fonflatter.github.io.iml" filepath="$PROJECT_DIR$/.idea/fonflatter.github.io.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/scaffold.iml" filepath="$PROJECT_DIR$/.idea/scaffold.iml" />
     </modules>
   </component>
 </project>
