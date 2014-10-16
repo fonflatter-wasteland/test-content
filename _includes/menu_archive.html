@@ -1,0 +1,30 @@
+<div id="menu_archive" class="panel">
+    {% for year in (2005..current_year) reversed %}
+    <h4 class="btn-group">
+        <button class="btn btn-default" data-toggle="collapse" data-parent="#sidebar_left"
+                data-target="#year_{{ year }}">{{ year }} <span class="caret"></span></button>
+    </h4>
+
+    <div id="year_{{ year }}" class="panel-collapse collapse{% if year == current_year %} in{% endif %}">
+        <div class="btn-group-vertical panel-body">
+            {% for i in (0..11) reversed %}{% capture disable_output %}
+            {% assign month = i | plus: 1 %}
+
+            {% if year == 2005 and month < 9 %}
+            {% continue %}
+            {% endif %}
+
+            {% if year == current_year and month > current_month %}
+            {% continue %}
+            {% endif %}
+
+            {% capture url %}/{{ year }}/{% if month < 10 %}0{% endif %}{{ month }}/{% endcapture %}
+
+            {% capture link %}
+            <a class="btn btn-default" href="{{ url }}">{{_.month_names[i] }}</a>{% endcapture %}
+
+            {% endcapture %}{{ link }}{% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</div>

@@ -1,0 +1,8 @@
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+languages:
+  - de
+  - en
+permalink: /:categories/:year/:month/:day/:title/

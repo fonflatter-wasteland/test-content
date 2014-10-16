@@ -1,0 +1,51 @@
+de:
+  site:
+    title: fred fon flatter
+    url: https://www.fonflatter.de
+
+  menu:
+    title: Menü
+    items:
+      gifts: Geschenke
+      mail: Post
+      shop: Fredshop
+
+  month_names:
+    - Januar
+    - Februar
+    - März
+    - April
+    - Mai
+    - Juni
+    - Juli
+    - August
+    - September
+    - Oktober
+    - November
+    - Dezember
+
+en:
+  site:
+    title: fred the bat
+    url: https://www.fonflatter.com
+
+  menu:
+    title: Menu
+    items:
+      gifts: Gifts
+      mail: Mail
+      shop: Fredshop
+
+  month_names:
+    - January
+    - February
+    - March
+    - April
+    - May
+    - June
+    - July
+    - August
+    - September
+    - October
+    - November
+    - December

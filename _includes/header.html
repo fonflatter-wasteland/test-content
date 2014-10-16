@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+{% capture disable_output %}
+<!-- the following includes do not output anything -->
+{% include i18n.md %}
+{% include dates.md %}
+{% endcapture %}
+<head lang="{{ lang }}">
+    <meta charset="UTF-8">
+    <title>{{ _.site.title }} - {{ page.title }}</title>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/style.css" type="text/css"/>
+</head>
+
+<body>
+{% include menu_top.html %}
+
+<div class="row">
+    <div id="sidebar_left" class="col-md-1" >
+        {% include menu_archive.html %}
+    </div>
+
+    <div class="col-md-11">
