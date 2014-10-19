@@ -1,5 +1,15 @@
 language: ruby
 cache: bundler
-script: "bundle exec jekyll build"
+env:
+  global:
+  - TARGET_REPO_SLUG=fonflatter/test-content
+  - TARGET_REPO_BRANCH=gh-pages
+before_install:
+- git clone --depth 1 https://github.com/fonflatter/util/ ~/util/
+- ~/util/prepare.sh
+script:
+- bundle exec jekyll build
 after_script:
-  - find _site/
+- find _site/
+after_success:
+- ~/util/publish.sh
