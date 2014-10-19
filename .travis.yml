@@ -6,7 +6,7 @@ env:
   - TARGET_REPO_BRANCH=gh-pages
 before_install:
 - git clone --depth 1 https://github.com/fonflatter/util/ ~/util/
-- ~/util/prepare.sh
+- ~/util/prepare.sh "$encrypted_1ca5a24313d0_key" "$encrypted_1ca5a24313d0_iv"
 script:
 - bundle exec jekyll build
 after_script:
