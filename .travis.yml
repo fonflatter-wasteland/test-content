@@ -1,16 +1,9 @@
 language: python
 env:
   global:
-  - TARGET_REPO_BRANCH=master
-  - TARGET_REPO_DIR=~/build/fonflatter/test-content
   - TARGET_REPO_SLUG=fonflatter/test-content
-before_install:
-- openssl aes-256-cbc -K $encrypted_36f03a76214f_key -iv $encrypted_36f03a76214f_iv
-  -in .ssh/id_rsa.enc -out ~/.ssh/id_rsa -d
-- chmod og-rw ~/.ssh/id_rsa
-install: git clone -o github -b master git@github.com:$TARGET_REPO_SLUG.git $TARGET_REPO_DIR
-before_script:
-- curl https://raw.githubusercontent.com/fonflatter/util/master/.gitconfig > ~/.gitconfig
-- curl https://raw.githubusercontent.com/fonflatter/util/master/merge.sh > ~/merge.sh
-- chmod u+x ~/merge.sh
-script: ~/merge.sh
+  - TARGET_REPO_BRANCH=master
+install:
+- git clone --depth 1 https://github.com/fonflatter/util/ ~/util/
+- ~/util/prepare.sh "$encrypted_36f03a76214f_key" "$encrypted_36f03a76214f_iv"
+script: ~/util/merge.sh
