@@ -3,7 +3,7 @@ env:
   global:
   - TARGET_REPO_SLUG=fonflatter/test-content
   - TARGET_REPO_BRANCH=master
-before_install:
+install:
 - git clone --depth 1 https://github.com/fonflatter/util/ ~/util/
-install: ~/util/prepare.sh "$encrypted_1ca5a24313d0_key" "$encrypted_1ca5a24313d0_iv"
+- ~/util/prepare.sh "$encrypted_1ca5a24313d0_key" "$encrypted_1ca5a24313d0_iv"
 script: ~/util/merge.sh
