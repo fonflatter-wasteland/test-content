@@ -1,8 +1,15 @@
 exclude:
-  - Gemfile
-  - Gemfile.lock
-  - README.md
+- Gemfile
+- Gemfile.lock
+- README.md
 languages:
-  - de
-  - en
+- de
+- en
 permalink: /:categories/:year/:month/:day/:title/
+exclude:
+- .git
+- .ssh
+- Gemfile
+- Gemfile.lock
+- README.md
+- vendor
