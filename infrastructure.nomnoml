@@ -1,0 +1,47 @@
+[<state>github.com/fonflatter|
+
+  [scaffold|
+    [<sender>master]
+  ]
+
+  [test-content|
+    [master (scaffold)]
+
+    [<sender>comics]
+    [<sender>comments]
+    [master]
+    [<receiver>gh-pages]
+
+    [<choice>merge] -> [master]
+    [comics] - [merge]
+    [comments] - [merge]
+    [master (scaffold)] - [merge]
+
+    [<choice>publish] -> [gh-pages]
+    [master] - [publish]
+    [<note>Jekyll] -- [publish]
+  ]
+
+  [util|
+    [<sender>master]
+  ]
+
+  [scaffold] -- [master;(scaffold)]
+  [master;(scaffold)] --> [test-content]
+
+  [util] -- [<choice>merge]
+  [merge] --> [test-content]
+
+  [util] -- [<choice>publish]
+  [publish] --> [test-content]
+]
+
+[<note>|
+[repository|...]|
+[<sender>site source]|
+[<receiver>displayed content]|
+[intermediate branch]|
+[<choice>script]
+]
+
+#fill: #eee; #ccc; #eee
